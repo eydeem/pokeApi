@@ -1,0 +1,19 @@
+{
+  "name": "poke_node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "poke.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "fs": "0.0.1-security",
+    "http": "0.0.1-security",
+    "node-fetch": "^3.2.4"
+  }
+}
