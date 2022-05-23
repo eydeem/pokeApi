@@ -8,16 +8,16 @@ export function compare(pokemon1, pokemon2) {
     for (let i = 0; i <= 5; i++) {
         if (pokemon1['stats'][i]['base_stat'] > pokemon2['stats'][i]['base_stat']) {
 
-            result['comparision'].push({ "name": pokemon1['stats'][i]['stat']['name'], "winner": pokemon1['name'] });
+            result['comparision'].push({ "name": pokemon1['stats'][i]['stat']['name'], 'winner': pokemon1['name'] });
             pointsPokemon1 += 1;
 
         } else if (pokemon1['stats'][i]['base_stat'] < pokemon2['stats'][i]['base_stat']) {
 
-            result['comparision'].push({ "name": pokemon1['stats'][i]['stat']['name'], "winner": pokemon2['name'] });
+            result['comparision'].push({ 'name': pokemon1['stats'][i]['stat']['name'], 'winner': pokemon2['name'] });
             pointsPokemon2 += 1;
 
         } else {
-            result['comparision'].push({ "name": pokemon1['stats'][i]['stat']['name'], "winner": "tie" });
+            result['comparision'].push({ 'name': pokemon1['stats'][i]['stat']['name'], 'winner': 'tie' });
         }
     }
 
@@ -26,7 +26,7 @@ export function compare(pokemon1, pokemon2) {
     } else if (pointsPokemon1 < pointsPokemon2) {
         result['winner'] = pokemon2['name'];
     } else {
-        result['winner'] = "tie";
+        result['winner'] = 'tie';
     }
 
     const cache_data = {};

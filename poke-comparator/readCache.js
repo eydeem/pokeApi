@@ -1,6 +1,6 @@
 import fs from 'fs';
 
-CACHE_FILE_NAME = 'cache.json';
+const CACHE_FILE_NAME = 'cache.json';
 
 export function readCache(pokemon1, pokemon2) {
     const cacheFile = fs.readFileSync(CACHE_FILE_NAME);

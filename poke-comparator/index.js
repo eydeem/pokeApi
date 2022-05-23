@@ -18,7 +18,7 @@ app.post('/', async function (req, res) {
     else {
         const result = [];
         for (const pokemon in req.body) {
-            const url = "https://pokeapi.co/api/v2/pokemon/" + req.body[pokemon];
+            const url = 'https://pokeapi.co/api/v2/pokemon/' + req.body[pokemon];
             const response = await fetch(url)
                 .then(res => {
                     if (res.status === 200) {
@@ -27,7 +27,7 @@ app.post('/', async function (req, res) {
                 });
 
             if (!response) {
-                res.status(404).json({ "errorMessage": `Pokemon ${req.body[pokemon]} not found` });
+                res.status(404).json({ 'errorMessage': `Pokemon ${req.body[pokemon]} not found` });
                 return;
             }
             result.push(response);
